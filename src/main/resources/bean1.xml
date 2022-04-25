@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--配置User对象创建-->
+<!--    <bean id="user" class="com.atguigu.spring.User"></bean>-->
+    <bean id="book" class="com.atguigu.spring.Book">
+        <property name="bname" value="一二三"></property>
+        <property name="bauthor" value="abc"></property>
+        <property name="address">
+            <value><![CDATA[<<上海>>]]></value>
+        </property>
+    </bean>
+
+<!--    <bean id="order" class="com.atguigu.spring.Order">-->
+<!--        <constructor-arg name="oname" value="Mac"></constructor-arg>-->
+<!--        <constructor-arg name="address" value="China"></constructor-arg>-->
+<!--    </bean>-->
+</beans>
