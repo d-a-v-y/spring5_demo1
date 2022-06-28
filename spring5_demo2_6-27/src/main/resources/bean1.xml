@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--<bean id="user" class="com.atguigu.spring5.User"></bean>-->
+
+    <!--<bean id="book" class="com.atguigu.spring5.Book">
+        <property name="bname" value="易筋经"></property>
+        <property name="bauthor" value="达摩"></property>
+        &lt;!&ndash;<property name="address">
+            <null/>
+        </property>&ndash;&gt;
+        <property name="address">
+            <value>
+                <![CDATA[<<ok>>]]>
+            </value>
+        </property>
+    </bean>-->
+
+    <!--<bean id="order" class="com.atguigu.spring5.Order">
+        <constructor-arg name="oname" value="abc"></constructor-arg>
+        <constructor-arg name="address" value="China"></constructor-arg>
+    </bean>-->
+
+    <!--<bean id="book" class="com.atguigu.spring5.Book" p:bname="九阳神功" p:bauthor="无名氏"></bean>-->
+
+    <bean id="stu" class="com.atguigu.spring5.collectiontype.Stu">
+        <property name="courses">
+            <array>
+                <value>java</value>
+                <value>sql</value>
+                <value>javascript</value>
+            </array>
+        </property>
+        
+        <property name="list">
+            <list>
+                <value>赵</value>
+                <value>钱</value>
+                <value>孙</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="JAVA" value="java"></entry>
+                <entry key="SQL" value="sql"></entry>
+                <entry key="JS" value="js"></entry>
+            </map>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>Redis</value>
+                <value>Docker</value>
+                <value>MQ</value>
+            </set>
+        </property>
+
+        <property name="courseList">
+            <list>
+                <ref bean="course1"></ref>
+                <ref bean="course2"></ref>
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="course1" class="com.atguigu.spring5.collectiontype.Course">
+        <property name="cname" value="SPRING"></property>
+    </bean>
+
+    <bean id="course2" class="com.atguigu.spring5.collectiontype.Course">
+        <property name="cname" value="SPRING MVC"></property>
+    </bean>
+
+</beans>

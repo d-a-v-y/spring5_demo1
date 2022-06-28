@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 
 @Service
-@Transactional(readOnly = false, timeout = 5, propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
+//@Transactional(readOnly = false, timeout = 5, propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
 public class UserService {
 
     //注入DAO
@@ -22,6 +22,8 @@ public class UserService {
     //转账的方法
     public void accountMoney() {
         userDao.reduceMoney();
+
+//        int i = 1/0;
 
         userDao.addMoney();
     }
